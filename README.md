@@ -113,7 +113,7 @@ Final grades will be assigned according to the standard cutoffs (90%+ for an A, 
 | Jan 25 | Th  | Overview of Data Scientists' tools ([Notes](https://github.com/tyleransom/DScourseS18/blob/master/DatabaseMgmt/README.md)) |                                                                                                                                |
 | Jan 30 | T   | Using data: data types, storage ([Notes](https://github.com/tyleransom/DScourseS18/blob/master/DatabaseMgmt/DataTypes.md)) | [PS 2](https://github.com/tyleransom/DScourseS18/blob/master/Productivity/PS2.pdf) |
 | Feb 1  | Th  | Big Data: SQL ([Notes](https://github.com/tyleransom/DScourseS18/blob/master/DatabaseMgmt/SQLoverview.md)) & RDDs ([link](https://spark.apache.org/docs/0.9.1/scala-programming-guide.html)); running jobs on the OSCER cluster |                                                                                                                                |
-| Feb 6  | T   | Sampling & storing Big Data ([Notes](https://github.com/tyleransom/DScourseS18/blob/master/DatabaseMgmt/HadoopSpark.md)) | [PS 3](https://github.com/tyleransom/DScourseS18/blob/master/DatabaseMgmt/PS3.pdf) |
+| Feb 6  | T   | Sampling & storing Big Data                                   | [PS 3](https://github.com/tyleransom/DScourseS18/blob/master/DatabaseMgmt/PS3.pdf) |
 | Feb 8  | Th  | Web scraping/APIs to gather data                              |                                                                                                                                |
 | Feb 13 | T   | Web scraping/APIs to gather data                              | PS 4                                                                                                                           |
 | Feb 15 | Th  | Data exploration, descriptive stats                           |                                                                                                                                |
@@ -155,7 +155,6 @@ Final grades will be assigned according to the standard cutoffs (90%+ for an A, 
 * The Master Algorithm ([Amazon link](https://www.amazon.com/Master-Algorithm-Ultimate-Learning-Machine-ebook/dp/B012271YB2))
 * Julia for Data Science ([Amazon link](https://www.amazon.com/Julia-Data-Science-Zacharias-Voulgaris/dp/1634621301))
 * R for Data Science ([Free PDF](http://r4ds.had.co.nz/))
-* Data Science at the Command Line ([Free eBook](https://www.datascienceatthecommandline.com/))
 
 ## Academic Integrity: ##
 
