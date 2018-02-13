@@ -1,9 +1,11 @@
 df1 <- as.data.frame(iris)
-df <- createDataFrame(df1)
+df <- createDataFrame(iris)
 class(df1)
 class(df)
 head(select(df, df$Sepal_Length, df$Species))
 head(filter(df, df$Sepal_Length>5.5))
 head(select(filter(df, df$Sepal_Length>5.5), df$Sepal_Length, df$Species))
 head(summarize(groupBy(df, df$Species), mean=mean(df$Sepal_Length), count=n(df$Sepal_Length)))
+df2 <- createDataFrame(iris)
+head(arrange(df2, asc(df2$Species)))
 
