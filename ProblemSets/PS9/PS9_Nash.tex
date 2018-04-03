@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS9}
+\author{Morgan Nash}
+\date{April 2018}
+\maketitle
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\section{LASSO Model}
+The optimal lambda is 0.029
+In sample RMSE is 0.213.
+Out-of-sample RMSE is 0.207.
+
+
+\section{Ridge Model}
+In-sample RMSE is 0.207
+Out-of-sample RMSE is 0.198.
+The optimal lambda is 0.0132.
+
+\section{Elastic Net Model}
+In-sample RMSE is 0.201
+Out-of-sample RMSE is 0.192
+The optimal lambda is 0.024. The optimal alpha is 0.198. Since this is closer to 0, this leads me to believe that more weight should be placed on the ridge model.
+
+\section{Conclusion}
+Assuming that the goal of this assignment is to predict housing prices, a simple OLS regression would not be very useful. All that OLS would do is tell us which variables influence the change in housing prices within a certain sample. OLS does not predict very well out-of-sample.
+
+It seems that these models, having RMSEs closer to zero, have higher bias than variance, since RMSE typically (but not always) increases with variance. The LASSO model has the highest RMSE and is therefore perhaps the least reliable and has higher variance than the others. The elastic net model has the lowest RMSE and has the lowest variance but more bias. It is interesting, however, that out-of-sample RMSE is lower than in-sample for each model. I think I am not entirely certain why out-of-sample variance would be lower.
+
+\end{document}
