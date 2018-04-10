@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS10}
+\author{Morgan Nash }
+\date{April 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{3}{|c|}{Tuning Parameters} \\
+ \hline
+ Algorithm    & F1 &Gmean\\
+ \hline
+ Tree  & 0.897    &0.673\\
+ Logit&   0.897  & 0.714\\
+ Neural Net &0.907 & 0.757\\
+ KNN   &0.899 & 0.756\\
+ Naive Bayes&   0.884 & 0.726\\
+ SVM& 0.909  & 0.754 \\
+ \hline
+\end{tabular}
+
+\section{Interpretation}
+Based on the f-score, the best model will have an f1 value closest to 1. Therefore, the support vector machine predicts the best out-of-sample based on this metric. The neural network is the next-best predictor, followed by k-nearest neighbor. The tree and logit models express the same out-of-sample accuracy, while the naive Bayes model performs the worst. The neural net model has the highest geometric mean, followed by KNN and SVM. Naive Bayes and the logit model follow, with a substantial difference between the two (.012) compared to the difference between NN, KNN, and SVM. The tree model has, by far, the lowest geometric mean.
+
+\end{document}
