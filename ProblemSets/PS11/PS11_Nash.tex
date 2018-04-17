@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS11_Nash}
+\author{nashtwa }
+\date{April 2018}
+
+\documentclass[12pt,english]{article}
+\usepackage[authoryear]{natbib}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\begin{document}
+
+\section{Outline}
+\begin{itemize}
+\item Introduction
+    \begin{itemize}
+    \item Explanation of “modernization thesis”—essentially, the idea that I am testing/inspiration for this project
+\item Description of the study—to test this, I will be discerning the impact of majority religion of country, immigration influxes, and other variables on how restrictive, i.e. undemocratic, a country is with regard to the practice of religion.
+\item I will then assess the impact of government restrictions on religion, majority religion of country, immigration, and other variables on GDP per capita.
+\item These two regressions will inform whether there is a definitive link between government restrictions on religion and economic variables.
+    \end{itemize}
+\item Lit Review
+    \begin{itemize}
+    \item Fukuyama—the modernization thesis
+\item Owen and Shah—religion, economic flourishing, and immigration. How immigration acts as a channel for innovation, and religious restrictions act as a barrier to immigration. Case study: The Netherlands.
+\item World Economic Forum: Innovation and spiritual barriers to trade
+\item Grim, Clark, and Snyder: Is Religious Freedom Good for Business?—an empirical analysis of countries with low restrictions on religion and innovation.
+
+    \end{itemize}
+\item Data
+    \begin{itemize}
+    \item Description of the dependent variable, the GRI—what it is, who controls it and developed it (Grim and Finke and Pew)
+\item Description of independent variables—immigration data from the UN, macroeconomic data from the World Bank
+\item Summary statistics
+\item Drawbacks/shortcomings of the data
+
+    \end{itemize}
+\item Empirical Methods
+    \begin{itemize}
+    \item Explanation of immigration variables: how Muslim immigration was separated from total immigration
+\item Two multivariate linear regression models:
+\item 2015 GRI = \beta0 + \beta1 TotalIm + \beta2 MusIm + \beta3 Jew + \beta4Hind + \beta5Buddh + \beta5Mus + \beta8GDP + \beta9Unemp + \beta10I + \beta11GDPg
+
+\item GDP = \beta0 + \beta1 TotalIm + \beta2 MusIm + \beta3 Jew + \beta4Hind + \beta5Buddh + \beta5Mus + \beta82015GRI + \beta9Unemp + \beta10I + \beta11GDPg
+\item Report results
+
+    \end{itemize}
+\item (Anticipated) findings
+    \begin{itemize}
+    \item First model:
+Total immigration is insignificant, but Muslim immigration is significant, so it depends on the religion that immigrants practice
+Majority religion of host country is significant—specifically, if Muslim or Jewish.
+\item Second model:
+ Majority religion of host country is significant
+Total immigration is significant—implies immigration does factor into economic growth; therefore, any barrier to immigration, such as a “spiritual barrier” or restriction on religion, is not to the economic benefit of nations.
+    \end{itemize}
+\item Conclusion
+    \begin{itemize}
+    \item Muslim-majority countries are more likely to have higher restrictions on religion. Muslim majority countries in the second model are statistically significant and the coefficient is negative, which does indicate that countries with high restrictions on religion experience less economic growth.
+\item Selection bias: countries that are highly volatile (e.g. war torn countries) have lower GDP. Many Muslim-majority countries, at present, are war zones. 
+
+    \end{itemize}
+\end{itemize}
+
+\bibliographystyle{jpe}
+\nocite{*}
+\bibliography{MWE.bib}
+
+\end{document}
