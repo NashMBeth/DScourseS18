@@ -1,0 +1,305 @@
+
+\documentclass[12pt,english]{article}
+\usepackage{mathptmx}
+
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{RGB}{0.,0.,139.}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage[authoryear]{natbib}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage[flushleft]{threeparttable}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{pdflscape}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=true,pdfborder={0 0 0},backref=false,
+ colorlinks,citecolor=black,filecolor=black,
+ linkcolor=black,urlcolor=black]
+ {hyperref}
+\usepackage[all]{hypcap} % Links point to top of image, builds on hyperref
+\usepackage{breakurl}    % Allows urls to wrap, including hyperref
+
+\linespread{2}
+
+\begin{document}
+\begin{singlespace}
+\title{Immigration, Religious Freedom, and Economic Flourishing: An Empirical Analysis}
+\end{singlespace}
+
+\author{Morgan Nash\thanks{Department of Economics, University of Oklahoma.\
+E-mail~address:~\href{mailto:morgan.b.nash-1@ou.edu}{morgan.b.nash-1@ou.edu}}}
+
+% \date{\today}
+\date{May 8, 2018}
+
+\maketitle
+\begin{abstract}
+\begin{singlespace}
+The intersection between immigration and economic variables has long been known. Scholars postulate that immigrants select to migrate toward nations of economic stability, job market opportunities, and opportunity for an improved quality of life. The theory suggests that there is a “push” and “pull” effect that determines immigration levels in nations. Push effects  include political and economic instability that incentivize emigration from nations, whereas pull effects include political freedom, economic opportunity, etc. that incentivize immigration to nations. This theory, however, assumes perfect mobility of labor, i.e., low to no barriers to immigration. What is of interest in this report is the manner in which policies that impact free expression and practice of religion erect barriers to immigration, thereby affecting levels of innovation and economic development. Religious persecution in the country of origin would act as a push effect for immigrants, while religious freedom in a prospective host country would act as a pull effect, suggesting that nations with high levels of religious freedom would experience greater immigration influxes, and, theoretically, economic growth as a result. I will focus on the post-Arab Spring era, specifically, the year 2015, as the Arab Spring acted as a push effect for many Arab citizens, resulting in immigration influxes in Western countries. I suggest that these influxes prompted increased interaction between Muslim and non-Muslim individuals in non-Muslim majority countries, and, as a result, non-Muslim majority countries imposed laws limiting the extent of free expression of religion.  I will then assess how increasing levels of restrictions on religion impact immigration levels and attempt to evaluate the relationship between restrictions on religion and macroeconomic variables using Ordinary Least Squares (OLS) regression analysis. Ultimately, this analysis will inform whether, economically speaking, it is in the self interest of nations to pursue policies protecting religious freedom.
+\end{singlespace}
+
+\end{abstract}
+\vfill{}
+
+
+\pagebreak{}
+
+\section{Introduction}
+\indent The 2011 Arab Spring was a wave of uprisings spanning 20 countries in the Middle East and Northern Africa. Following the Arab Spring, immigration levels increased worldwide (\citet{MPCreport}). This is largely due to immigration outflows from the Middle East to European and North American nations. It is evident that, in many cases, these nations imposed restrictions on the practice of Islam. In France, for example, the \textit{hijab} was banned from public places in 2010, following substantial immigration influxes from Middle Eastern nations. According to the \citet{ACLU}, zoning laws were disproportionately enacted against the expansion and construction of mosques in the United States in years following 2010. These two cases are examples of a growing trend in restrictions on religious practice, and restrictions in both the United States and France were increased in response to the growing presence of immigrants practicing religions that are of minority status in the host country. Intuitively, these are examples of increased government restrictions on religion in response to immigration influxes.
+
+While a substantial amount of scholarly work has been dedicated to historiographical analysis and theorizing of the relationship between economic outcomes and religious freedom, empirical analysis is lacking. Much of this is due to data constraint--it is very difficult to quantitatively assess religious freedom, and macroeconomic data is noisy. Scholars Brian Grim and Roger Finke, however, developed the Government Restrictions on Religion Index in conjunction with Pew Research. The index is a measure of how restrictive governments around the world are with regard to religious practice, expression, and identification. The index takes into account restrictions ranging from laws prohibiting religious garb to zoning restrictions on the construction of religious facilities, as well as whether governments explicitly provide for religious freedom in some written clause or law. The index is calculated for 190 countries roughly every 5 years. This index permits the empirical exploration of the correlation between economic prosperity and religious freedom.
+
+\section{Literature Review}
+While it is evident from anecdotal evidence that there are instances in which governments enact restrictions on religious practice in response to immigration levels, the question remains as to what is the exact impact of such policies. Sociologist \citet{Owen} analyzed the immigration policies of the Netherlands in the 17th cenutry, during a boom of economic prosperity and trade activity. Owen found that the Netherlands was experiencing substantial influxes of the Protestant Huguenots as they fled persecution from the Catholic government in France. Owen determined that the Dutch government had deliberately pursued policies of tolerance in order to attract immigrants; however, above all, the Netherlands was a nation under Protestant rule. For this reason, both government restrictions on religion and the majority religion of host country played a role in the Huguenots' decision to flee to the Netherlands. This period of high immigration influxes corresponded directly with high levels of innovation in the Netherlands during this period; thus, Owen concluded that policies of religious tolerance aligned with the nation's self-interest.
+
+Although, from Owen's analysis of the Netherlands, it is evident that domestic innovation can increase as an indirect result of religious freedom, Owen further expanded his analysis to assess "spiritual barriers to trade." Although the Netherlands experienced substantial economic growth, some Catholic nations were reluctant to trade with a Protestant nation, particularly France, which was an economic powerhouse at the time. A contemporary example of this is hostility between Saudi Arabia and Iran. Saudi Arabia and Iran, both holders of significant amounts of oil, do not trade with one another as a result of hostility that originated with the Sunni/Shi'a divide in the 7th century CE and persecution of Shi'a Muslims in modern Saudi Arabia. This persecution of Shi'a Muslims takes the form of imprisonment of Shi'a Muslims, fewer job market opportunities, as well as restrictions on the manner in which Muslims pray (Shi'a Muslims pray three times a day with hands at their sides, while Sunni Muslims pray five times a day with hands folded). The rivalry between the two nations occasionally carries over into the oil market, usually in the form of one nation over-producing to drive down prices and revenue for the other. Therefore, we may conclude that religious factors hold some influence over trade activity, as well.
+
+Economist and philosopher \citet{Fukuyama} coined the ''development thesis,'' or the notion that, as nations develop economically, they become more democratic and favor policies of religious freedom and tolerance. In Fukuyama's view, economic growth is the causal mechanism--nations experience a boom in technology that attracts migrants from nations of differing majority religion. These migrants then lobby and advocate for religious practice, and, as a result of exposure, the native population becomes more tolerant of religious diversity. As in the case of the Netherlands, however, it is possible that cultures of religious toleration and low levels of govenrment restrictions on religion act as a pull effect for immigrants. This would imply that the correlation Fukuyama notes between economic development and democratization exists, but economic development is more likely to follow democratization due to innovation and increased spending from immigrants drawn by the promise of freedom.
+
+Upon examination of the above case studies, it is clear that there are instances in which restrictions on religious freedom are negatively correlated with economic growth and trade activity. \citet{Shah} synthesized these observations into a more robust, general theory of the intersection between economic flourishing, immigration, and religious freedom: ''To the extent that intelligent, entrepreneurial, and hard-working individuals are drawn to a society and expand its productivity by making more efficient use of its resources, they will enhance economic development and growth. This is true not only in terms of attracting migrants to settle in a territory but also in attracting merchants with whom to trade'' (Shah 18).
+
+According to \citet{Pew}, the proportion of the world’s population living in areas with severe religious restrictions increased from 70\% to 75\% from 2009 to 2010, and this trend continued into 2015. This is a five percentage point increase over the course of a single year. An empirical investigation into what the global increase in religious restriction portends, therefore, is necessary. In order to assess whether the trend of increasing restrictions on religion must change, the relationship between economic variables and government restrictions on religion must be explored.
+
+\section{Data}
+The data is cross-sectional data from the year 2015. The Government Restrictions Index (GRI) was taken from \citet{Pew} for 190 countries. If any countries were missing observations for the GRI, these countries were dropped from the dataset. I pulled data for economic variables from the World Bank database. The variables I elected to examine were GDP per capita, unemployment as a percentage of the total population, percentage of population living in rural areas, net exports (balance of payment), majority religion of country, population, immigration levels, and GDP growth. I collected data on immigration from the UN's 2015 Migration Report and manually broke this up into immigration originating from Muslim-majority countries in each and total immigration to each country. 
+
+Although there were not many missing observations, the data was MNAR (missing not at random). Most missing observations were from small island countries. All data is from the year 2015. I elected to study only data from 2015 because this is the only year for which the GRI was available following the Arab Spring, and I wanted to ensure I was capturing the effect of immigration influxes of a particular religion--in this case, Islam--to test how countries would respond to influxes of a religion that is not the same as the majority religion.
+
+Because there were not many missing observations, I determined that performing mean imputation for the missing economic variables would not decrease the variation for the model to explain too much. Refer to Table \ref{tab:descriptives} for summary statistics.
+
+\section{Methodology}
+I performed multivariate OLS regression to minimize the sum of the squared errors of residuals and find a line of best fit. The goal for this project is to explain historical trends, so this method is appropriate, as opposed to generating a machine learning model. I generated two linear regression models--one with GDP per capita as the dependent variable, the other with the GRI as the dependent variable. The equations for the models follow.
+
+\begin{multline}
+\label{eq:1}
+Y_{GRI2015}=\beta_{0} + \beta_{1}X_{TotalIm} + \beta_{2} Y_{MusIm} + \beta_{3} Z_{Mus} + \beta_{4}A_{Jew} + \beta_{5}B_{Hind} + \beta_{6}C_{Buddh} \\ + \beta_{7}D_{Unemp} + \beta_{8}E_{Pop} + \beta_{9}F_{BoP} + \beta_{10}G_{GDP} + \varepsilon,
+\end{multline}
+
+\begin{multline}
+\label{eq:1}
+Y_{GDP}=\beta_{0} + \beta_{1}X_{TotalIm} + \beta_{2} Y_{MusIm} + \beta_{3} Z_{Mus} + \beta_{4}A_{Jew} + \beta_{5}B_{Hind} + \beta_{6}C_{Buddh} \\ + \beta_{7}D_{Unemp} + \beta_{8}E_{Pop} + \beta_{9}F_{BoP} + \beta_{10}G_{GRI2015} + \varepsilon,
+\end{multline}
+
+
+Where $Y_{GRI2015}$ is the dependent variable of the Government Restrictions Index and $Y_{GDP}$ is the dependent variable of GDP per capita, $\beta_{1}X_{TotalIm}$ denotes the partial effect of total immigration, $\beta_{2} Y_{MusIm}$ the effect of immigration from Muslim-majority countries, $\beta_{3} Z_{Mus}$ the effect of a country having a majority Muslim population, $\beta_{4}A_{Jew}$ the impact of a Jewish-majority population, $\beta_{5}B_{Hind}$ the impact of a Hindu-majority population, $\beta_{6}C_{Buddh}$ the impact of a Buddhist-majority population, $\beta_{7}D_{Unemp}$ the effect of a country's unemployment level, $\beta_{8}E_{Pop}$ the impact of the size of the population in a country, $\beta_{9}F_{BoP}$ net exports, $\beta_{10}G_{GDP}$ the effect of GDP per capita, and $\varepsilon$ is the error term.
+
+Note here that I did experiment with different variables, such as GDP growth and inflation, which did not add to the R-squared value of either model in a substantial enough manner, nor did they deduct from the F-statistic much. 
+
+Breusch-Pagan tests for heteroskedasticity were conducted on both models. For the first, heteroskedasticity is present, given a p-value of essentially zero. Heterskedasticity is not present in the second model, given a p-value greater than 0.05. The first model was run with robust standard errors to correct for heteroskedasticity.
+
+\section{Research Findings}
+Tables \ref{tab1} and \ref{tab2} give the results from each linear regression model. I will first discuss the findings from the model with the GRI as the dependent variable, then analyze the second model. Refer to Figures 1 and 2 for visualizations of the main variables of interest for each model.
+
+Note that, in the regression results for the first model, immigration from Muslim-majority countries, majority religion of country, and population are statistically significant at the 95\% confidence level. The R-squared value is 0.496, meaning that this model explains 49.6\% of the variation in the GRI. With an F-statistic of 17.42, the model altogether is statistically significant.
+The coefficient for Muslim immigration is positive, meaning that, as Muslim immigration to a country increases by 100,000 immigrants, the GRI increases by 0.06 points. This may not appear to be a substantial increase, but given that nations' GRI values usually do not vary much year-to-year, a change of 0.06 attributed to a single factor is significant. Furthermore, note that total immigration was not statistically significant. This indicates that immigration overall does not increase the GRI, but immigration influxes of practitioners of certain religions, in this case, Muslims, does. 
+
+Majority religion of country is also strongly positively correlated with the GRI. Most significantly, if a country is Muslim-majority, the GRI increases by 2.1 points on average. For a scale ranging from 1-10, this is substantial. I suspect that this is a result of the theocratic structure of many Muslim-majority countries.
+
+Lastly, population is significant and positively correlated. While there are many plausible explanations for this, the following seems the most plausible: The greater a nation's population, the more likely citizens are to encounter others of minority religions. This may prompt a staunch reaction from the majority to maintain political and social hegemony.
+
+The R-squared value of the second model is lower, explaining 41.5\% of the variation in GDP. The variables of majority religion of country, unemployment, percentage of population living in rural areas, and total immigration are statistically significant. With an F-statistic of 11.33, the model as a whole is statistically significant.
+
+Total immigration is significant and positive, tracking with the assumption that immigration leads to greater economic output. The effect of percentage of population living in rural areas is negative, meaning that, the more rural the population, the lower economic output of the country. Unemployment, as theory predicts, is also negatively correlated with GDP. Finally, majority religion of country is statistically significant--most notably, whether a country is Muslim-majority is negatively correlated with GDP. This could be due to many factors. Many Muslim-majority countries are currently in a state of conflict, and economic output in conflicted countries typically drops during peak conflict. The relationship could also be attributed to the dependence of the economy of many Muslim-majority countries on oil--given the abundance of this natural resource in Muslim-majority countries and high global demand, there is not much need to innovate and grow other industries.
+
+\section{Conclusion}
+Combining analysis from both models, it seems that government restrictions do increase where high levels of Muslim immigration are experienced. Additionally, immigration does contribute in a meaningful and positive way to economic output. This implies that governments that seek greater economic output ought to pursue policies that permit immigration and mobility of labor. Enacting restrictions on the religion of certain groups of immigrants is likely to deter immigration in the future. Therefore, it is in the economic self-interest of nations to pursue policies of religious freedom and decrease barriers to immigration.
+Secondly, urbanization is crucial to higher economic output. Given that, as \citet{James} finds, immigrants typically arrive in and stay in urban areas, increased immigration could potentially encourage urbanization.
+
+It does not seem that any statistically significant relationship between trade activity and the GRI exists, nor is there a definitive relationship between trade activity and GDP. Therefore, Owen's hypothesis that religious freedom leads to increased trade activity is invalidated for this data.
+
+Overall, it is important to examine Muslim immigration levels in the post-Arab Spring era as a natural experiment to test claims made concerning the intersection between government restrictions of religious freedom and economic flourishing. Given the development of the Government Restrictions Index by Grim and Finke and the wealth of data available from the UN, it has recently become possible to empirically test these claims. Although, as of now, the only year for which data availability is sufficient is 2015, more research of this kind may be conducted as data becomes more available and the GRI is updated. Based on this 2015 analysis, however, it does appear that there is some empirical support for the argument that low government restrictions on religion can incentivize greater immigration levels, and, because immigration contributes positively to economic growth, it is in the self interest of nations to pursue policies that protect religious freedom.
+
+
+
+\vfill
+\pagebreak{}
+\begin{spacing}{1.0}
+\bibliographystyle{jpe}
+\bibliography{references.bib}
+\addcontentsline{toc}{section}{References}
+\end{spacing}
+
+%========================================
+% FIGURES AND TABLES 
+%========================================
+\section*{Figures and Tables}\label{sec:figTables}
+\addcontentsline{toc}{section}{Figures and Tables}
+%----------------------------------------
+% Figure 1
+%----------------------------------------
+\begin{figure}[ht]
+\centering
+\bigskip{}
+\includegraphics[width=.75\linewidth]{relfitpng.PNG}
+\caption{The relationship between majority religion, Muslim immigration levels, and the GRI}
+\label{fig:fig1}
+\end{figure}
+
+%----------------------------------------
+% Figure 2
+%----------------------------------------
+\begin{figure}[ht]
+\centering
+\bigskip{}
+\includegraphics[width=.75\linewidth]{relfit2png.PNG}
+\caption{The relationship between majority religion, the GRI, and GDP}
+\label{fig:fig2}
+\end{figure}
+
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{tab1} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & GRI2015 \\ 
+\hline \\[-1.8ex] 
+ Tim & $-$0.0002 \\ 
+  & (0.0004) \\ 
+  & \\ 
+ Mim & 0.061$^{***}$ \\ 
+  & (0.016) \\ 
+  & \\ 
+ Mus & 2.645$^{***}$ \\ 
+  & (0.281) \\ 
+  & \\ 
+ Jew & 3.546$^{**}$ \\ 
+  & (1.591) \\ 
+  & \\ 
+ Hind & $-$0.265 \\ 
+  & (1.011) \\ 
+  & \\ 
+ Buddh & 2.106$^{***}$ \\ 
+  & (0.508) \\ 
+  & \\ 
+ PopD & 0.0002$^{**}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ GDPpppD & $-$0.0003 \\ 
+  & (0.075) \\ 
+  & \\ 
+ Unemp & $-$0.024 \\ 
+  & (0.018) \\ 
+  & \\ 
+ BoP & 0.00000 \\ 
+  & (0.00000) \\ 
+  & \\ 
+ Constant & 2.286$^{***}$ \\ 
+  & (0.260) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 188 \\ 
+R$^{2}$ & 0.496 \\ 
+Adjusted R$^{2}$ & 0.468 \\ 
+Residual Std. Error & 1.577 (df = 177) \\ 
+F Statistic & 17.419$^{***}$ (df = 10; 177) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{tab2} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & GDPpppD \\ 
+\hline \\[-1.8ex] 
+ PopD & $-$0.0001 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ GDPg & 0.016 \\ 
+  & (0.023) \\ 
+  & \\ 
+ Unemp & $-$0.032$^{**}$ \\ 
+  & (0.015) \\ 
+  & \\ 
+ BoP & $-$0.00000 \\ 
+  & (0.00000) \\ 
+  & \\ 
+ RuralPer & $-$0.036$^{***}$ \\ 
+  & (0.004) \\ 
+  & \\ 
+ Tim & 0.001$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ Mim & 0.001 \\ 
+  & (0.014) \\ 
+  & \\ 
+ Mus & $-$0.480$^{**}$ \\ 
+  & (0.238) \\ 
+  & \\ 
+ Jew & 0.695 \\ 
+  & (1.366) \\ 
+  & \\ 
+ Hind & 0.213 \\ 
+  & (0.876) \\ 
+  & \\ 
+ Buddh & $-$0.032 \\ 
+  & (0.436) \\ 
+  & \\ 
+ Constant & 3.074$^{***}$ \\ 
+  & (0.283) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 188 \\ 
+R$^{2}$ & 0.415 \\ 
+Adjusted R$^{2}$ & 0.378 \\ 
+Residual Std. Error & 1.352 (df = 176) \\ 
+F Statistic & 11.331$^{***}$ (df = 11; 176) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+%----------------------------------------
+% Table 3
+%----------------------------------------
+\begin{table}[ht]
+\caption{Summary Statistics of Variables of Interest}
+\label{tab:descriptives} 
+\centering
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+&&&&\\
+\multicolumn{5}{l}{\emph{Panel A: Summary Statistics for Variables of Interest}}\\
+\toprule
+                                                        & Mean  & Std. Dev. & Min   & Max   \\
+\midrule
+2015 GRI                                      & 3.26 & 2.17     & 0.2 & 8.7 \\
+GDP per Capita                                      & 1.23 & 1.71     & 0.03 & 9.97 \\
+Unemployment                                         & 9.05 & 0.47     & 0.16 & 41.2 \\
+Population                                      & 381.43 & 1424.19     & 0.099 & 13712.2 \\
+\% In Rural Living                                      & 42.79 & 23.61     & 0.00 & 91.56 \\
+Net Exports                                      & 185973.8 & 477229.7     & 0.1 & 1405040 \\
+Total Immigration                                      & 125.08 & 389.84     & 0.01 & 4662.71 \\
+Muslim Immigration                                      & 3.65 & 9.33     & 0.00 & 63.51 \\
+&&&&\\
+\midrule
+\bottomrule
+\end{tabular}
+\footnotesize Exports in billions of dollars. Population in hundred thousands. GDP in millions of dollars. Immigration in hundred thousands. Sample size for all variables in Panel A is $N=190$.
+\end{threeparttable}
+\end{table}
+
+
+\end{document}
